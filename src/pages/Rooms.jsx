@@ -1,3 +1,8 @@
+import React from 'react';
+import { Button } from '@/components/ui/Button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card';
+
+
 export default function Rooms({ setPage }) {
   const rooms = [
     {
@@ -17,6 +22,24 @@ export default function Rooms({ setPage }) {
       desc: "Spacious room perfect for families.",
       image: "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg",
       price: "8,000 / night"
+    },
+    {
+      name: "Executive Suite",
+      desc: "Elegant space with panoramic views.",
+      image: "https://images.pexels.com/photos/271640/pexels-photo-271640.jpeg",
+      price: "10,000 / night"
+    },
+    {
+      name: "Presidential Suite",
+      desc: "Ultimate luxury with private lounge.",
+      image: "https://images.pexels.com/photos/271641/pexels-photo-271641.jpeg",
+      price: "15,000 / night"
+    },
+    {
+      name: "Honeymoon Suite",
+      desc: "Romantic getaway with premium amenities.",
+      image: "https://images.pexels.com/photos/271642/pexels-photo-271642.jpeg",
+      price: "12,000 / night"
     }
   ];
 
@@ -100,10 +123,22 @@ export default function Rooms({ setPage }) {
           object-fit: cover;
           border-radius: 12px;
           margin-bottom: 12px;
+          transition: transform 0.3s ease;
+        }
+
+        .room-card img:hover {
+          transform: scale(1.05);
         }
 
         .room-card h3 {
           margin-bottom: 5px;
+          font-size: 1.25rem;
+        }
+
+        .room-card p {
+          font-size: 0.95rem;
+          color: #eee;
+          margin-bottom: 10px;
         }
 
         .price-tag {
@@ -137,3 +172,4 @@ export default function Rooms({ setPage }) {
     </>
   );
 }
+
